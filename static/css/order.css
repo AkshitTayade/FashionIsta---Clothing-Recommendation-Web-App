@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+body {
+  background-color: #fff;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.navbar{
+	background: #000;
+	box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.5);
+}
+.nav-item .nav-link{
+	color: #fff !important;
+}
+
+.nav-link .dropdown-item a{
+
+	color: #212529 !important;
+} 
+.navbar-toggler { 
+	border-color: white !important; 
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+} 
+#orders{
+    margin-top: 120px;
+}
+
+.card{
+    border-radius: 20px !important;
+    margin-bottom: 30px;
+}
+
+.img-fluid{
+    border-radius: 20px !important;
+}
+
+.deli{ 
+    background-color: #e7ffeb;
+    border:none !important;
+    border-radius: 0 !important;
+    color: #128a27;
+    font-size: 18px !important; 
+    padding: 14px !important;
+}
+.panel-title{
+    font-size: 25px;
+}
+.heading-small {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.form-control {
+    transition: box-shadow .15s ease;
+    font-family: 'Comic Neue', cursive;
+    padding: 25px 10px;
+    font-size: 18px;
+    font-weight: normal; 
+    border: 1px solid  rgba(80, 81, 82, 0.1) ;
+    box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%);
+}
+.form-control-label {
+    font-size: 20px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    color: #525f7f;
+}
+/* .btn-acc{
+    background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+    color: white;
+} */
+
+.btn-acc{
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+     outline: none;
+  }
+
+.btn-acc {
+    background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+    border: none;
+  }
+  
+.btn-acc:hover {
+    background: transparent;
+    color: rgb(54, 54, 54) ;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(255, 225, 225, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+  

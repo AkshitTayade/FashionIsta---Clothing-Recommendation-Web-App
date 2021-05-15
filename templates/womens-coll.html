@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% set cart_count = cart_count %}
+{% block content %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/collection.css') }}"/>
+{% endblock stylesheet %}
+<div class="container" style="margin-top: 130px;">
+    <div class="header-title">
+        <h1 class="text-center">Women's<span>Imagination at Work</span></h1>
+    </div>
+    <div class="row mb-4">
+        <div class="col-xl-4 col-md-6 col-12">
+            <div class="card">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_1')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000169/04_1_front.jpg">
+                    </a>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 1</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_2')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000348/07_4_full.jpg">
+                    </a>
+                    <span class="product-new-label">New</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 2</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12 mb-4">
+            <div class="card">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_3')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000134/02_4_full.jpg">
+                    </a>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 3</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_4')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000229/02_1_front.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 4</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_5')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000021/05_1_front.jpg">
+                    </a>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 5</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('women_dress_6')}}" class="image">
+                        <img class="pic-1" src="../static/Dresses/id_00000472/02_1_front.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <div class="price">$30.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Women's Dress 6</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

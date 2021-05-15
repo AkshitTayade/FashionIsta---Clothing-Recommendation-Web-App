@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% set cart_count = cart_count %}
+{% block content %}
+<!---adding css differnetly-->
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/order.css') }}"/>
+{% endblock stylesheet %}
+
+<section id="orders">
+    <div class="container">
+        <div class="header-title">
+            <h1 class="text-center">My Orders<span>Imagination at Work</span></h1>
+        </div>
+    </div>
+    <div class="order">
+
+
+<div class="container">
+    <div class="row">
+        {% for order in orders %}
+        <div class="col-md-12 col-12">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{ order[4] }}" class="w-100 img-fluid" >
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ order[0] }}</h4>
+                            <p class="card-text">$ {{ order[1] }}</p>
+                            <p><i class="fas fa-truck-moving"></i> {{ order[2] }},{{ order[3]}}</p>
+                            <span class="badge deli">Order Placed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+    </div>
+</section> 
+{% endblock %}

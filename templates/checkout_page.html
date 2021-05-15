@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+<!---adding css differnetly-->
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/checkout_page.css') }}"/>
+{% endblock stylesheet %}
+  <!-- content -->
+  <div class="section-empty">
+    <div class="container content">
+      <div class="row">
+        <div class="col-md-7" style="padding-top: 40px;">
+          <p class="billing_text">Shipping Address</p>
+          <div class="input_form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input_box_cart">
+                  <label class="form-control-label" for="firstName">First name</label>
+                  <input type="text" name="first" class="form-control" id="firstName" placeholder="{{ name[0] }}" value="" disabled>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input_box_cart">
+                  <label class="form-control-label" for="lastName">Last name</label>
+                  <input type="text" name="last" class="form-control" id="lastName" placeholder="{{ name[1] }}" value="" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input_box_cart">
+                  <label class="form-control-label" for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="{{ email }}" value="" disabled>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input_box_cart">
+                  <label class="form-control-label" for="email">Mobile Number</label>
+                  <input type="number" name="number" class="form-control" id="number" placeholder="{{ number }}" value="" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input_box_cart">
+                  <label  class="form-control-label" for="address">Address</label>
+                  <input type="text" name="delivery_address" class="form-control" id="address" placeholder=" {{ user_address }}" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input_box_cart">
+                  <label class="form-control-label" for="city">City</label>
+                  <input type="text" name="city" class="form-control" id="city" placeholder="{{ user_city }}" disabled >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label class="form-control-label" for="country">Country</label>
+              <input type="text" class="form-control" id="country" placeholder="India" disabled >
+            </div>
+            <div class="col-md-4 mb-3">
+              <label class="form-control-label" for="state">State</label>
+              <input type="text" id="state" name="state" class="form-control"  placeholder=" {{ user_state}}" disabled >
+            </div>
+            <div class="col-md-3 mb-3">
+              <label class="form-control-label" for="zip">Zip</label>
+              <input type="text" name="zip" class="form-control" id="zip" placeholder="{{ user_zipcode}}" disabled >
+            </div>
+          </div>
+          <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+        </div>
+        <div class="edit">
+            <a href="{{ url_for('my_acc') }}">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+             Edit your address
+            </a>
+        </div>
+        <hr class="mb-4">
+          <form action="{{ url_for('success') }}" method="POST">
+            <script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                data-key="rzp_test_UXcC4YP3qme4qP"
+                data-amount="{{ total_INR }}"
+                data-buttontext = "Pay with RazorPay"
+                data-name="FashionIsta"
+                data-description="Purchase Description"
+                data-image="vk.jpg"
+                data-netbanking="true"
+                data-description="Tron Legacy"
+                data-prefill.name="{{ name }}"
+                data-prefill.email="{{ email }}"
+                data-prefill.contact="{{ number }}"
+                data-notes.shopping_order_id="31">
+            </script>
+            <input type="hidden" name="shopping_order_id" value="31">
+          </form>
+         
+        </div>
+      
+        <div class="col-md-5" style="padding-top: 40px;">
+          <p class="billing_text">Your Cart</p>
+          <div class="add">
+            {% for item in items %}
+            <div class="row item p-3">
+              <div class="col-4 align-self-center">
+                <img class="img-fluid" src="{{ item.product_image }}">
+              </div>
+                <div class="col-8">
+                  <div class="row title">{{ item.product_title }}</div>
+                  <div class="row price-a text-danger">$  {{ item.product_price }}</div>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+          <div class="cart_total">
+            <div class="price_total mt-2 d-flex justify-content-between">
+              <p>Total</p>
+              <p>$ {{ subtotal }}</p>
+            </div>
+            <div class="price_total  d-flex justify-content-between ">
+              <p>Shipping Charges</p>
+              <p>$ 5.0</p>
+            </div>
+            <div class="price_total  d-flex justify-content-between ">
+              <p>Taxes</p>
+              <p>$ 4.0</p>
+            </div>
+          </div>
+          <button type="button" class="btn button-total  btn-lg btn-block d-flex justify-content-between">
+            <span>Total</span>
+            <span>$ {{ total }}</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

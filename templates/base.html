@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>The Fashion App</title>
+
+    <!-- Bootstrap CSS -->
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+	<div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('index')}}">
+        <img src="../static/images/logo.png">
+      </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto ">
+        {% if title == 'home' %}
+         <li class="nav-item active">
+				   <a class="nav-link nav-link-ltr px-4  " href="{{url_for('index')}}">HOME</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link nav-link-ltr  px-4" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link nav-link-ltr  px-4" href="#collection">COLLECTIONS</a>
+        </li>
+        {% else %}
+        <li class="nav-item ">
+          <a class="nav-link nav-link-ltr px-4  " href="{{url_for('index')}}">HOME</a>
+       </li>
+        {% endif %}
+        <li class="nav-item ">
+          <a class="nav-link nav-link-ltr px-4  " href="{{url_for('contact')}}">CONTACT</a>
+       </li>
+       {% if session['logged_in'] %}
+          <li class="nav-item dropdown">
+            <a class="nav-link  px-3 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user" style="font-size: 24px;" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Hey {{ session["username"] }}</a>
+              <a class="dropdown-item" href="{{ url_for ('my_acc')}}">My Account</a>
+              <a class="dropdown-item" href="{{url_for('my_orders') }}">My Orders</a>
+              <a class="dropdown-item" href="{{url_for('logout')}}">Log Out</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link nav-link-ltr  px-4" href="{{url_for('login')}}">LOGIN</a>
+          </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link px-3" href="{{url_for('view_cart')}}"><i class="fa fa-shopping-cart"><span class="badge ">{{ cart_count }}</span></i></a>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link  px-3" href="#"><i class="fas fa-upload " style="font-size: 24px;"></i></a>
+        </li> -->
+			</ul>
+		  </div>
+	</div>
+</nav>
+    
+    
+
+{% block content %}
+
+
+{% endblock %}
+
+<!--========================== Footer============================-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer_about">
+              <div class="footer_logo" style="margin-top: -27px;">
+                <a href="">
+                  <img src="../static/images/logo.png">
+                </a>
+              </div>
+              <p>
+                The customer is at the heart of our unique business model, which includes design and 3D experience of the designs.
+              </p>
+              <a href="">
+                <img src="https://preview.colorlib.com/theme/malefashion/img/payment.png" class="mt-4">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+            <div class="footer_widget">
+              <h6>Shopping</h6>
+              <ul>
+                <li><a href="#collection">Collections</a></li>
+                <li><a href="">Trending Clothes</a></li>
+                <li><a href="{{ url_for ('three_d_dresses')}}">New 3D Collection</a></li>
+                <li><a href="">Sale</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <div class="footer_widget">
+              <h6>Support</h6>
+              <ul>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                <li><a href="{{url_for('view_cart')}}">Shopping Cart</a></li>
+                <li><a href="{{ url_for('my_acc')}}">Account</a></li>
+                <li><a href="{{ url_for('my_orders')}}">My Orders</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6 ">
+            <div class="footer_widget">
+              <h6>Newsletter</h6>
+              <div class="footer_newsletter">
+                <p>
+                  Be the first to know about new arrivals,sales & 3D collection views!
+                </p>
+                <form action="">
+                  <div class="d-flex justify-content-between">
+                    <input type="text" placeholder="Your email address">
+                    <button type="submit">
+                      <i class="fas fa-envelope " style="font-size: 20px;"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="footer_copyright_text">
+              <p>Copyright © 2021 All rights reserved | This application is made with &nbsp;  <i class="fa fa-heart-o" style="color: red;" aria-hidden="true"></i>&nbsp; by Vidhi Sejpal and Akshit Tayade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a id="scroll-up"></a>
+    </footer>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/4077c6ef6a.js" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<script src="../static/js/owl.js"></script>
+<script src="../static/js/script.js"></script>
+<script src="../static/js/ar-view.js"></script>
+<script>
+//   $('.nav-link').on('click',function() {
+//   $('.navbar-collapse').collapse('hide');
+// });
+</script>
+</html>

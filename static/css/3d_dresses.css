@@ -1,0 +1,119 @@
+html{
+  height: 100vh;
+
+}
+body {
+  background: #fff;
+  height: 100%;
+ 
+}
+.navbar{
+	background-color:#000;
+	box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.5);
+}
+.navbar-brand{
+	color: #fff !important;
+}
+.nav-item a{
+	color: #fff !important;
+}
+.navbar-toggler { 
+	border-color: white !important; 
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+} 
+#dress{
+  margin-top: 150px;
+}
+.ar-product{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 620px;
+    width: 100%;
+    padding-top: 285px;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.items{
+    margin-top: 50px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19); */
+}
+ .owl{
+    margin-top: 10px;
+  }
+ 
+  .owl-nav button {
+   position: absolute;
+   top: 40%;
+   background-color: #343a40;
+   color: #fff;
+   margin: 0;
+   transition: all 0.3s ease-in-out;
+ }
+ .owl-nav button.owl-prev {
+   left: 0;
+   display: none;
+ }
+ .owl-nav button.owl-next {
+   right: 0;
+   display: none;
+ }
+ .owl-lazy 
+ {
+   height: 350px;
+   width: 100%;
+ }
+ 
+ .owl-dots {
+   text-align: center;
+   padding-top: 15px;
+ }
+ .owl-dots button.owl-dot {
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   display: inline-block;
+   background: #ccc;
+   margin: 0 3px;
+ }
+ .owl-dots button.owl-dot.active {
+   background-color: #343a40;
+ }
+ .owl-dots button.owl-dot:focus {
+   outline: none;
+ }
+ 
+ /* #carousel-row{
+   height:25rem;
+ } */
+
+ .skewed-div
+ {
+    
+    width:100%;
+    background-color:#f4f5fd;
+    transform: skewY(-10deg);
+    padding:4%;
+    text-align:center;
+   
+ }
+ .skewed-content
+ {
+    transform: skewY(10deg);
+ }
+ .skewed-content p
+ {
+   padding:2% 20%;
+   font-size:20px;
+   line-height:30px;
+ }

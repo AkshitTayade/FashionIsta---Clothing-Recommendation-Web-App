@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% set cart_count = cart_count %}
+{% block content %}
+<!---adding css differnetly-->
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/shopping-cart.css') }}"/>
+{% endblock stylesheet %}
+<section id="shopping-cart">
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+             <div class="alert alert-{{category}} fade show alert-dismissible pt-3 pb-3 text-center" style="font-size: 1.2rem; ">
+              {{message}}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
+      </div>
+    <div class="container">
+        <div class="header-title">
+            <h1 class="text-center">Shopping Cart<span>Imagination at Work</span></h1>
+        </div>
+        <div class="sub-heading d-flex justify-content-between">
+            <h1>My Cart</h1>
+            <div>
+                <a href="{{ url_for('index') }}" class="btn continue">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+    
+  <div class="cart">
+      <div class="container ">
+          <div class="row">
+            {% for item in items %}
+              <div class="col-md-12 col-12">
+                  <div class="shop-cart">
+                      <img src="{{ item.product_image }}" alt="img" class="img-responsive">
+                      <div class="cart-content">
+                          <div class="d-flex justify-content-between">
+                              <h3>{{ item.product_title }}</h3>
+                              <h3 class="price">${{ item.product_price }}</h3>
+                              <a href="{{ url_for('remove_item', name= item.product_title ) }}" class="remove">x</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}   
+          </div>
+      </div>  
+  </div>
+  <div class="container mb-4">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo"  placholder="Enter Code" />
+              <a href="#" class="btn promo">
+                <i class="fas fa-chevron-right"></i>
+              </a></div>
+          </div>
+          <div class="col-lg-6">
+              <div class="subtotal cf">
+              <ul>
+                <li class="totalRow"><span class="label">Subtotal</span><span class="value">${{ subtotal }}</span></li>
+                    <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+                    <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
+                    <li class="totalRow final"><span class="label">Total</span><span class="value">${{ total}}</span></li>
+               </ul>
+               <div class="button mt-2">
+                  <a href="{{ url_for('checkout') }}" class="btn checkout">Checkout</a>
+               </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</section> 
+{% endblock %}

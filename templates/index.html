@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% set title = "home" %}
+{% set cart_count = cart_count %}
+
+{% block content %}
+
+<div id="header" class="home">
+    <div class="container">
+      <div class="header-content">
+        <h1>FASHION</h1>
+        <h1 style="color: #8b4513">MADE</h1>
+        <h1>SIMPLE</h1>
+        <div>
+            <a href="#collection" class="btn btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- About Start -->
+<div class="about" id="about">
+    <div class="container">
+        <div class="header-title">
+            <h1 class="text-center">About Us<span>Imagination at Work</span></h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1603401740347-dc340113440f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="about-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                    </p>
+                    <a class="btn" href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<div id="collection">
+    <div class="container">
+        <div class="header-title">
+            <h1 class="text-center">Collections<span>Fashion meets soul</span></h1>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-6 col-sm-6 mb-4 ">
+                <div class="box">
+                    <a href="{{url_for('mens_collection')}}"><img src="../static/images/men.jpeg" loading="eager"></a>
+                    <div class="box-content">
+                        <div class="inner-content">
+                            <h3 class="title">Men's Collection</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 mb-4 ">
+                <div class="box">
+                    <a href="{{url_for('womens_collection')}}"><img src="../static/images/women.jpeg" loading="eager"></a>
+                    <div class="box-content">
+                        <div class="inner-content">
+                            <h3 class="title">Women's Collection</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-------------------------------------3D VIEW------------------------------->
+    
+<div  class="three-d-view">
+    <div class="container">
+      <div class="three-d-content">
+        <h1>Experience <span>New 3D</span> Collection</h1>
+        <div class="mt-2">
+            <a href="{{ url_for ('three_d_dresses')}}" class="btn btn-lg">View More</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+<!-------------------------------------ship------------------------------->
+<div class="ship-methods">
+<div class="container-fluid w-100 ">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 col-12 text-center">
+            <div class="ship">
+                <i class="fas fa-shipping-fast"></i>
+                <h6>Free  Delivery</h6>
+                <p>Free ship with order over $40.</p>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-12 text-center">
+            <div class="ship">
+                <i class="fas fa-wallet"></i>
+                <h6>Cash On Delivery</h6>
+                <p>Convenient payment methods.</p>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-12 text-center">
+            <div class="ship">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <h6>Secure Payment System</h6>
+                <p>100% Secured Payment Options</p>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-12 text-center">
+            <div class="ship">
+                <i class="fas fa-headphones-alt"></i>
+                <h6>Support</h6>
+                <p>Get help 24/7</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+

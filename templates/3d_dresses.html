@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/3d_dresses.css') }}"/>
+{% endblock stylesheet %}
+<section id="dress">
+    <div class="container">
+        <div class="header-title">
+            <h1 class="text-center m-4">3D Collection<span>Imagination at Work</span></h1>
+        </div>
+    </div>
+    <div class="ar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="ar-product" style="background-image: url(https://preview.colorlib.com/theme/fashi/img/products/women-large.jpg);">
+                        <h2>Women's</h2>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row mb-4" id="carousel-row">
+                        <div class="col-12">
+                            <div id="carousel-view" class="owl-carousel">
+                                <div class="items  card">
+                                    <a href="{{ url_for('dress_1_3d') }}" target="_blank">
+                                        <img class="owl-lazy" data-src="../static/images/3d_dress_1.jpeg" width="100%" alt="">
+                                    </a> 
+                                </div>
+                                <div class="items  card">
+                                    <a href="{{ url_for('dress_2_3d') }}" target="_blank">
+                                        <img class="owl-lazy" data-src="../static/images/3d_dress_2.jpg" width="100%" alt="">
+                                    </a> 
+                                </div>
+                                <div class="items  card">
+                                    <a href="{{ url_for('dress_3_3d') }}" target="_blank">
+                                        <img class="owl-lazy" data-src="../static/images/3d_dress_3.png" width="100%" alt="">
+                                    </a> 
+                                </div>  
+                                <div class="items  card">
+                                    <a href="{{ url_for('dress_4_3d') }}" target="_blank">
+                                        <img class="owl-lazy" data-src="../static/images/3d_dress_4.jpg" width="100%" alt="">
+                                    </a> 
+                                </div>                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="outer pb-5">
+        <div class="skewed-div">
+          <div class="skewed-content">
+           <h1>SCANFCODE</h1>
+           <p>Scanfcode.com “CODE WANTS TO BE SIMPLE” is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include.
+           </p>
+         </div>
+        </div>
+    </div>
+    
+    
+    <div class="ar mt-5 pt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row mb-4" id="carousel-row">
+                        <div class="col-12">
+                          <div id="carousel-views" class="owl-carousel">
+                            <div class="items  card">
+                                <a href="{{ url_for('dress_5_3d') }}" target="_blank">
+                                    <img class="owl-lazy" data-src="../static/images/3d_dress_5.jpg" width="100%" alt="">
+                                </a> 
+                            </div>  
+
+                            <div class="items  card">
+                                <img class="owl-lazy" data-src="https://preview.colorlib.com/theme/fashi/img/products/man-3.jpg" alt="">
+                            </div>
+                            <div class="items  card">
+                                <img class="owl-lazy" data-src="https://preview.colorlib.com/theme/fashi/img/products/man-3.jpg" alt="">
+                            </div>
+                            <div class="items  card">
+                                <img class="owl-lazy" data-src="https://preview.colorlib.com/theme/fashi/img/products/man-3.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="ar-product" style="background-image: url(https://preview.colorlib.com/theme/fashi/img/products/man-large.jpg);">
+                        <h2>Men's</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

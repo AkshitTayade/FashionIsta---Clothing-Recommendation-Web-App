@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
+html, body {width: auto!important; overflow-x: hidden!important}
+body {
+  background: #fff;
+  height: 100%;
+ 
+}
+.btn:hover {
+    color: #fff !important;
+}
+ol, ul {
+    list-style: none;
+  }
+
+.navbar{
+	background-color:#000;
+	box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.5);
+}
+.nav-item .nav-link{
+	color: #fff !important;
+}
+
+
+.nav-link .dropdown-item a{
+
+	color: #212529 !important;
+} 
+.navbar-toggler { 
+	border-color: white !important; 
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+} 
+#shopping-cart{
+    margin-top: 120px;
+}
+.heading{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sub-heading{
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    padding: 16px 0;
+    margin-bottom: 20px;
+}
+.sub-heading h1{
+    font-size: 32px;
+}
+.sub-heading .continue{
+    text-decoration: none;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    padding: 10px 45px;
+    color: #fff;
+    text-align: center;
+    background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+    font-weight: bold;
+    border-radius: 50px;
+    float: right;
+    transition: all 0.25s linear;
+}
+.sub-heading a.continue:after {
+    content: "\276f";
+    padding: 8px;
+    position: relative;
+    right: 0;
+    transition: all 0.15s linear;
+}
+.sub-heading a.continue:hover:after{
+    right: -10px;
+}
+.cart {
+    margin: 20px 0px;
+}
+.cart .container{
+    /* background: #ebf5f8; */
+    background:  #ffede1;
+}
+.shop-cart {
+    margin-top: 30px;
+    margin-bottom: 100px;
+   
+}
+.shop-cart img {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+}
+
+.cart-content {
+    padding-left: 120px;
+}
+.cart-content h3 {
+    font-size: 20px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.cart-content .price{
+    font-weight: bold;
+    font-size: 20px;
+    color: #777777;
+}
+.img-responsive{
+    width: 100%;
+}
+a.remove {
+  text-decoration: none;
+  font-family: 'Comic Neue', cursive;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding:0px 10px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 50%;
+  transition: all 0.25s linear;
+}
+a.remove:hover {
+  background: #f30;
+}
+
+
+/* TOTAL AND CHECKOUT  */
+
+.subtotal .totalRow {
+    padding: 8px;
+    text-align: right;
+}
+.subtotal .totalRow.final {
+    font-size: 14px;
+    font-weight: bold;
+}
+.subtotal .totalRow span {
+    display: inline-block;
+    padding: 0 0 0 16px;
+    text-align: right;
+}
+.subtotal .totalRow .label {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #212529;
+}
+.subtotal .totalRow .value {
+    letter-spacing: -.025em;
+    width: 35%;
+}
+.promoCode {
+    border: 2px solid #efefef;
+    float: left;
+    width: auto;
+    padding: 25px;
+}
+.promoCode label {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.promoCode input {
+    width: 85%;
+    font-size: 16px;
+    padding: 8px;
+    float: left;
+    border: 1px solid #dadada;
+}
+.promoCode input:active, .promoCode input:focus {
+    outline: 0;
+}
+.promoCode a.btn {
+    float: left;
+    width: 15%;
+    padding: 8px 0;
+    border-radius: 0 16px 16px 0;
+    text-align: center;
+}
+.promo{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 16px 45px;
+    color: #fff;
+    background: #000;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+
+.button .checkout{
+    text-decoration: none;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    padding: 10px 48px;
+    color: #fff;
+    background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+    font-weight: bold;
+    border-radius: 50px;
+    float: right;
+    text-align: right;
+    transition: all 0.25s linear;
+  }
+  .button .checkout:after {
+    content: "\276f";
+    padding: 8px;
+    position: relative;
+    right: 0;
+    transition: all 0.15s linear;
+}
+.button .checkout:hover:after{
+    right: -10px;
+}
+@media (max-width: 767px) {
+    .sub-heading{
+        padding: 10px 0px;
+    }
+    .sub-heading h1{
+        font-size: 25px;
+    }
+    .sub-heading .continue{
+        padding: 8px;
+        font-size: 15px;
+    }
+    .button .checkout{
+        padding: 8px;
+        font-size: 15px;
+    }
+    .cart-content h3 {
+        font-size: 15px;
+    }
+    .cart-content .price{
+        font-size: 15px;
+    }
+    a.remove {
+        margin-top: -4px;
+        font-size: 15px;
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

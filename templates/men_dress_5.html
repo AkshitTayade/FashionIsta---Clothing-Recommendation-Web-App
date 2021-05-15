@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content %}
+<!---adding css differnetly-->
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/shop.css') }}"/>
+{% endblock stylesheet %}
+<section id="try">
+<div class="container-fluid d-flex justify-content-center mt-5">
+    <div class="cart">
+        <div class="row ">
+            <div class="col-xl-5 col-md-12 ">
+                <img src="../static/Tees_Tanks/id_00000390/14_7_additional.jpg" width="100%" id="ProductImg">              
+            </div>
+            <div class="col-xl-7 col-md-12">
+                <div>
+                    <h1 class="product-title">Men's Shirt 5</h1>
+                    <div class="reviews ">
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <p>240 reviews</p>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">$20.00</span>
+                        <span>$25</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 sze">
+                        <h5>Size</h5>
+                        <select class="size custom-select">
+                            <option>Select Size</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 qty">
+                        <h5>Quantity</h5>
+                        <select class="quantity custom-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="product">
+                    <div class="product-inf">
+                        <ul>
+                            <li class="active"><a href="#Description">Product Description</a></li>
+                            <li><a href="#Details">Product Details</a></li>
+                          </ul>
+                    </div>
+                    <div class="tabs-content">
+                        <div id="Description">
+                            <p>Give your little diva a comfortable attire with this stylish top that features a cute applique detail on the surface. It comes with full sleeves to add to the young one's look and make her stand out from her peers.</p>
+                        </div>
+                        <div id="Details" >
+                            <ul>
+                                <b>FEATURES:</b>
+                                <li>Material:  Cotton</li>
+                                <li>The actual product may differ slightly in color from the one illustrated in the images.</li>                    
+                                <b>WHAT'S INCLUDED:</b>
+                                <li>1 T-Shirt</li>
+                                <b>CARE:</b>
+                                <li>Gentle Wash</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <form action="{{ url_for('add_to_cart') }}" method="POST">
+                        <button type="submit" class="btn-shop">Add To Cart</button>
+                        <a href="#id1" onclick="show()" class="btn-shop ml-4">Similar Items <i class="fas fa-plus"></i></a>
+                    </form>
+                </div>
+            </div>
+         </div>
+         </div> 
+    </div>
+</div>
+
+<div id="id1" class="class1 d-none">
+    <h1 class="text-center">Similar Items</h1>
+    <div class="row " id="carousel-row">
+        <div class="col-12">
+            <div id="carousel" class="owl-carousel">
+            {% set count = namespace(value=0)%}
+            {% set product_name = namespace(value='') %}
+            {% set name1 = namespace(value='') %}
+            {% set name2 = namespace(value='') %}
+            {% set name3 = namespace(value='') %}
+            {% set collections = namespace(value='') %}
+            
+            {% for each_img in similar_items_img_list %}
+            
+            {% set name1.value = os.path.split(each_img) %}
+            {% set name2.value = os.path.split(name1.value[0]) %}
+            {% set name3.value = os.path.split(name2.value[0]) %}
+            {% set count.value = count.value + 1 %}
+            {% set collections.value = 'mens_collection' %}
+            {% set product_name = "Men's Shirt" %}
+
+            {% if os.path.split(each_img)[0] == os.path.split(given_img)[0] %}
+            
+            {% else %}
+            <div class="items  card m-3">
+                <a href="{{ url_for('dynamic_route', product_name=product_name, img_url1=name1.value[1], img_url2=name2.value[1], img_url3=name3.value[1], collections=collections.value) }}">
+                    <img class="owl-lazy" data-src="{{ url_for('static', filename=each_img) }}" alt="">
+                    <div class="price-l">$20.00</div>
+                </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Shirt {{ count.value }}</h5>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                    </div>
+            </div>
+            {% endif %}
+            {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+{% endblock %}

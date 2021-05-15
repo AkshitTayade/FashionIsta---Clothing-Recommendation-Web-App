@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+body {
+  background-color: #fff;
+}
+
+.navbar{
+	background-color:#000;
+	box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.5);
+}
+.nav-item .nav-link{
+	color: #fff !important;
+}
+
+.nav-link .dropdown-item a{
+
+	color: #212529 !important;
+} 
+.navbar-toggler { 
+	border-color: white !important; 
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+} 
+.section-empty{
+  margin-top: 120px;
+  margin-bottom: 50px;
+}
+.billing_text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  font-size: 20px;
+}
+.add{
+  margin-top: 60px;
+  border: 1px solid #dee2e6;
+}
+
+.add .title{
+  font-size: 20px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.add .price-a{
+    font-size: 20px;
+}
+
+.cart_total {
+  border: 1px solid #d4d4d491;
+  padding: 0px 10px;
+  border-top: 0;
+}
+.price_total{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #212529;
+}
+.input_form .input_box_cart {
+  margin-bottom: 15px;
+}
+
+.input_form {
+  margin-top: 2rem;
+}
+
+.form-control {
+  font-family: 'Comic Neue', cursive;
+  font-size: 18px;
+  padding: 25px 10px;
+  font-weight: normal; 
+  transition: box-shadow .15s ease;
+  border: 1px solid  rgba(80, 81, 82, 0.1) ;
+  box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%);
+}
+.form-control-label {
+    font-size: 20px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    color: #525f7f;
+}
+.edit .fa{
+  padding-right: 10px;
+  color: #2a2b2c;
+}
+.edit a {
+  color:#212529;
+}
+.button-total{
+  background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+  border: none;
+  color: #fff;
+}
+.button-total:hover{
+  color: #fff;
+}
+.razorpay-payment-button{
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+    border: none;
+}
+
+@media (max-width:767px){
+  .add{
+    margin-top: 20px;
+  }
+}

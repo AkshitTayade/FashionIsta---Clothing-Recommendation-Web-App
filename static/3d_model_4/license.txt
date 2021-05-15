@@ -1,0 +1,11 @@
+Model Information:
+* title:	Palestinian Dress
+* source:	https://sketchfab.com/3d-models/palestinian-dress-245fc60a2b8f414cabe1053ec73cb779
+* author:	Taylor (https://sketchfab.com/thoulihan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Palestinian Dress" (https://sketchfab.com/3d-models/palestinian-dress-245fc60a2b8f414cabe1053ec73cb779) by Taylor (https://sketchfab.com/thoulihan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

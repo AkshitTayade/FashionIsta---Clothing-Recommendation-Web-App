@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% set cart_count = cart_count %}
+{% block content %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/collection.css') }}"/>
+{% endblock stylesheet %}
+<div class="container" style="margin-top: 130px;">
+    <div class="header-title">
+        <h1 class="text-center">Men's<span>Imagination at Work</span></h1>
+    </div>
+    <div class="row mb-4">
+        <div class="col-xl-4 col-md-6 col-12">
+            <div class="card">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_1')}}" class="image">
+                        <img class="pic-1" src="../static/Tees_Tanks/id_00000390/09_1_front.jpg">
+                    </a>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 1</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_2')}}" class="image">
+                        <img class="pic-1" src="../static/Shirts_Polos/id_00000846/03_1_front.jpg">
+                    </a>
+                    <span class="product-new-label">New</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 2</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12 mb-4">
+            <div class="card">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_3')}}" class="image">
+                        <img class="pic-1" src="../static/Shirts_Polos/id_00000193/06_7_additional.jpg">
+                    </a>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 3</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_4')}}" class="image">
+                        <img class="pic-1" src="../static/Tees_Tanks/id_00000185/01_4_full.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 4</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_5')}}" class="image">
+                        <img class="pic-1" src="../static/Tees_Tanks/id_00000390/14_7_additional.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 5</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 col-12 ">
+            <div class="card new">
+                <div class="product-image">
+                    <a href="{{url_for('men_dress_6')}}" class="image">
+                        <img class="pic-1" src="../static/Tees_Tanks/id_00000705/01_1_front.jpg">
+                    </a>
+                    <span class="product-new-label">Sale</span>
+                    <div class="price">$20.00</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Men's Shirt 6</h3>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.navbar{
+	background-color:#000;
+	box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.5);
+}
+.nav-item .nav-link{
+	color: #fff !important;
+}
+.navbar-toggler { 
+	border-color: white !important; 
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+}
+
+.nav-link .dropdown-item a{
+
+	color: #212529 !important;
+} 
+.navbar-toggler-icon { 
+ background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+} 
+.title-page{
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+.card
+{ 
+	font-family: 'Fira Sans', sans-serif; 
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.322);
+	margin-bottom: 35px;
+	margin-left: 15px;
+}
+.card .product-image{
+	position: relative;
+	overflow: hidden;
+}
+.card .product-image a.image{ 
+	display: block; 
+}
+.card.new .product-image a.image:before{
+	content: '';
+	background: radial-gradient(circle, rgb(8, 7, 7) 0%, rgb(107, 106, 106) 100%);
+	color: #fff;
+	height: 70px;
+	width: 80px;
+	border-radius: 50%;
+	position: absolute;
+	right: -25px;
+	top: -25px;
+}
+.card .product-image a.image:after{
+	height: 120px;
+	width: 120px;
+	right: auto;
+	left: -120px;
+	top: auto;
+	bottom: -120px;
+	transition: all 0.3s ease;
+}
+.card:hover .product-image a.image:after{
+	left: -25px;
+	bottom: -40px;
+}
+
+.card .product-image img{
+	width: 100%;
+	height: 350px;
+}
+.card .product-new-label{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: absolute;
+	top: 7px;
+	right: 5px;
+}
+.card .price {
+	color: #000;
+	font-size: 22px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.card .title{
+	font-size: 22px;
+	font-weight: 500;
+	font-family: "Nunito Sans", sans-serif;
+	text-transform: capitalize;
+}
+
+.card-body .rating{
+	padding: 0;
+	margin: 0 0 7px 0;
+	list-style: none;
+}
+.card .rating li{
+	color: #ffba00;
+	font-size: 14px;
+	display: inline-block;
+}
+.card .rating li.disable{ 
+	color: #b6b3b0; 
+}
+@media screen and (max-width:990px){
+	.card{ 
+		margin: 0 0 30px; 
+	}
+}
+
