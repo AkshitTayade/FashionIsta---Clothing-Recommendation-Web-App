@@ -8,3 +8,4 @@ pandas==0.24.2
 requests==2.21.0
 razorpay==1.2.0
 passlib==1.7.4
+lxml==4.6.3
