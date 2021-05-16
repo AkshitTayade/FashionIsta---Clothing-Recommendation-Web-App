@@ -109,7 +109,21 @@ nav.scrolled  .navbar-toggler-icon {
  .navbar-nav .nav-link > .fa > .badge {
   top: -10px;
 }
-
+@media (max-width:767px){
+  .navbar{
+    background: #221919;
+    color: #fff !important;
+  }
+  .nav-link{
+    color: #fff !important;
+  }
+  .navbar-toggler { 
+    border-color: white !important; 
+  } 
+  .navbar-toggler-icon { 
+   background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important; 
+  } 
+}
 /*-----------------------------------------------------------------------------------*/
 /*  HEADER
 /*-----------------------------------------------------------------------------------*/
@@ -263,6 +277,7 @@ nav.scrolled  .navbar-toggler-icon {
 
 .about .about-text p {
   font-size: 20px;
+  text-align: justify;
   font-family: "Nunito Sans", sans-serif;
 }
 
