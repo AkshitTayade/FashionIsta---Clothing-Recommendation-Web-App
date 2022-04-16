@@ -12,7 +12,6 @@
   <img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">
 </p>
 
-
 To get eclectic clothing apparel, we used the unique dataset available at [Kaggle](https://www.kaggle.com/olgabelitskaya/style-color-images) which contains fashion apparel such as shoes, heels, rings, clothes. This dataset had a range of fashion apparel, but we made use of only clothing apparel for males and females. The dataset comes with a text file containing fields like brand name, product name, product type, label, image file. By the use of column: product type, we eliminate those items rows that were not needed. After removing unnecessary fashion apparel, our database had cleaned and essential clothing images. We also used the Large-scale apparel dataset which was fetched from [DeepFashion Database](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html).
 
 
@@ -34,6 +33,32 @@ We then use the concept of similarity on our predicated array obtained from the 
 
 **The Visual Similarity model is implemented on “Web application”. Once the image is passed through the data frame created by the “cosine similarity model”, we get a 1D array containing similarity scores with respect to other images in the database. This 1D array is sorted descending, giving top scores at the beginning of an array. From this sorted 1d array, we choose the top ‘n’ results we want.**
 </p>
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/AkshitTayade/FashionIsta
+```
+
+Go to the project directory
+
+```bash
+  cd FashionIsta
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  python3 app.py
+```
 
 ## Tech Stack
 1. Bootstrap (Frontend)
