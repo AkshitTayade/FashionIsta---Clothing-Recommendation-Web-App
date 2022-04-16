@@ -12,9 +12,9 @@
   <img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">
 </p>
 
-<p align='justify'>
+
 To get eclectic clothing apparel, we used the unique dataset available at Kaggle[here](https://www.kaggle.com/olgabelitskaya/style-color-images) which contains fashion apparel such as shoes, heels, rings, clothes. This dataset had a range of fashion apparel, but we made use of only clothing apparel for males and females. The dataset comes with a text file containing fields like brand name, product name, product type, label, image file. By the use of column: product type, we eliminate those items rows that were not needed. After removing unnecessary fashion apparel, our database had cleaned and essential clothing images. We also used the Large-scale apparel dataset which was fetched from [DeepFashion Database]("http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html").
-</p>
+
 
 ## Model Architecture
 
