@@ -8,7 +8,7 @@
 
 ## Data Collection
 
-<p align='justify'>
+<p align="justify">
   <img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">
 </p>
 
