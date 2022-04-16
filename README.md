@@ -10,13 +10,17 @@
 
 ## Data Collection
 
-<p align="justify"><img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png"></p>
+<p align='justify'>
+  <img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">
+</p>
 
 To get eclectic clothing apparel, we used the unique dataset available at [Kaggle]() which contains fashion apparel such as shoes, heels, rings, clothes. This dataset had a range of fashion apparel, but we made use of only clothing apparel for males and females. The dataset comes with a text file containing fields like brand name, product name, product type, label, image file. By the use of column: product type, we eliminate those items rows that were not needed. After removing unnecessary fashion apparel, our database had cleaned and essential clothing images. We also used the Large-scale apparel dataset which was fetched from [DeepFashion Database]().
 
 ## Model Architecture
 
-<p align="justify"><img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%202.png"></p>
+<p align="justify">
+  <img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%202.png">
+</p>
 
 ### Feature Extractor
 The feature extraction model will extract all rich information from the image as features. Our initial approach was to detect as many features as possible from a given image using CNN.We choose a pre-trained VGG16. As we just wanted to extract rich features from a pre- trained model and not do prediction/classification problems with our dataset, VGG16’s prediction layer was not needed (i.e., output layer). Considering VGG weights size and training time, it took a huge training time.
