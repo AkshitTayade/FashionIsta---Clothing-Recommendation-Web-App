@@ -77,7 +77,10 @@ Start the server
 ## Video link for demo
 [Video Link](https://www.youtube.com/watch?v=fnF34vbAv9s)
 
+## License
+
+[International Research Journal of Engineering and Technology (IRJET)](https://www.irjet.net/archives/V8/i4/IRJET-V8I4250.pdf)
+
 ## Authors
 - [@Akshit Tayade](https://github.com/AkshitTayade)
 - [@Vidhi Sejpal](https://github.com/Vidhi-Sejpal)
-
