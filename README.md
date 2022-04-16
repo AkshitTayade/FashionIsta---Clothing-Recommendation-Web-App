@@ -1,4 +1,5 @@
-# FashionIsta [View](https://fashionista-ty.herokuapp.com)
+# FashionIsta 
+The project was deployed on [Heroku](https://fashionista-ty.herokuapp.com).
 
 ## Problem Statement
 - Recommendation systems have been an essential part of company infrastructure and sales techniques for quite some time, which in cases has led to economic- as well as technological growth. 
