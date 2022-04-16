@@ -77,4 +77,7 @@ Start the server
 ## Video link for demo
 [Video Link](https://www.youtube.com/watch?v=fnF34vbAv9s)
 
-<iframe width="864" height="486" src="https://www.youtube.com/embed/fnF34vbAv9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Authors
+- [@Akshit Tayade](https://github.com/AkshitTayade)
+- [@Vidhi Sejpal](https://github.com/Vidhi-Sejpal)
+
