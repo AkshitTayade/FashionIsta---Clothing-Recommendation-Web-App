@@ -76,7 +76,10 @@ Start the server
 * More features like User can upload his desired clothing item on our website, and get similar items and have specific search results; Full duplex portal, where Organisation can upload their clothing apparels anytime they want, and changes are reflected towards user side too.
 
 ## Video link for demo
-[Video Link](https://www.youtube.com/watch?v=fnF34vbAv9s)
+<p align="justify">
+  [<img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">](https://www.youtube.com/watch?v=fnF34vbAv9s)
+</p>
+
 
 ## License
 
