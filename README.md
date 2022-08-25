@@ -77,8 +77,9 @@ Start the server
 
 ## Video link for demo
 <p align="justify">
-  [<img src="https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png">](https://www.youtube.com/watch?v=fnF34vbAv9s)
+  [![Fibonacci RMI Java EE]([http://img.youtube.com/vi/nX_inqaAzOI/0.jpg](https://github.com/AkshitTayade/FashionIsta/blob/master/static/images/Picture%201.png))](https://www.youtube.com/watch?v=fnF34vbAv9s)
 </p>
+
 
 
 ## License
